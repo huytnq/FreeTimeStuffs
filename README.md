@@ -1,2 +1,2 @@
 # FreeTimeStuffs
-This is a monitor with typing text using html and css only
+Here is some code I like to do in my free time
