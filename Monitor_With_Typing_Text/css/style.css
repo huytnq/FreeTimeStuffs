@@ -1,0 +1,146 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #262626;
+  }
+  .center  {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .monitor {
+    width: 350px;
+    height: 200px;
+    background: #000;
+    border-bottom: 30px solid #d8d8d8;
+    border-radius: 10px;
+  }
+  .monitor:before {
+    content:"";
+    width: 70px;
+    height: 60px;
+    background: #bdbdbd;
+    position: absolute;
+    left: 50%;
+    bottom: -35px;
+    transform: perspective(100px) translateX(-50%) rotateX(25deg) skewX(7deg);
+    z-index: -1;
+    transform-origin: bottom;
+  }
+  .monitor:after {
+    content:"";
+    width: 140px;
+    height: 15px;
+    background: #bdbdbd;
+    position: absolute;
+    left: 50%;
+    bottom: -50px;
+    transform: translateX(-50%);
+    z-index: -1;
+    transform-origin: bottom;
+  }
+  
+  .monitor i {
+    position: absolute;
+    left: 50%;
+    bottom: 8px;
+    text-decoration: none;
+    transform: translateX(-50%) scale(.8);
+    color: #858585;
+  }
+  .overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 10px;
+  }
+  .overlay:before {
+    content: "";
+    position: absolute;
+    left: -40px;
+    width: 60%;
+    height: 100%;
+    background: rgba(255, 255, 255, .3);
+    transform: skewX(-5deg);
+  }
+
+  .content {
+    padding-top: 15%;
+    color: #00cc44;
+  }
+
+  .wrapper {
+    margin-top: 5%;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .line__1,
+  .line__2 {
+    white-space: nowrap; /* keep text in one line */
+    overflow: hidden; /* hide text behind the cursor */
+    margin: 0.5rem auto;
+    font-family: "Major Mono Display", monospace;
+    font-size: 1.1rem;
+    font-weight: bold;
+  }
+  
+  .line__1 {
+    padding-left: 8%;
+    border-right: 2px solid rgba(17, 17, 17, 0.9);
+  
+    /* define animation types for text + cursor */
+    animation: animated-text__1 6s steps(30, end) 1s 1 normal both,
+      animated-cursor__1 900ms steps(30, end) 8;
+  }
+  
+  .line__2 {
+    padding-left: 20%;
+    border-right: 2px solid rgba(17, 17, 17, 0.9);
+  
+    /* define animation types for text + cursor */
+    animation: animated-text__2 3s steps(30, end) 1s 1 normal both,
+      animated-cursor__2 900ms steps(30, end) infinite;
+    -webkit-animation-delay: 7s;
+    animation-delay: 7s;
+  }
+  
+  @keyframes animated-cursor__1 {
+    from {
+      border-right-color: rgba(17, 17, 17, 0.9);
+    }
+    to {
+      border-right-color: rgba(255, 255, 255, 0.8);
+    }
+  }
+  
+  @keyframes animated-cursor__2 {
+    from {
+      border-right-color: rgba(17, 17, 17, 0.9);
+    }
+    to {
+      border-right-color: rgba(255, 255, 255, 0.8);
+    }
+  }
+  
+  @keyframes animated-text__1 {
+    from {
+      width: 0;
+    }
+    to {
+      width: 45rem;
+    }
+  }
+  
+  @keyframes animated-text__2 {
+    from {
+      width: 0;
+    }
+    to {
+      width: 29rem;
+    }
+  }
+  
